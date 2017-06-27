@@ -16,6 +16,7 @@
 			border-right: 1px solid #777;
 			padding-right: 7px;
 			display: inline;
+			white-space: pre;
 		}
 	</style>
 </head>
@@ -32,9 +33,9 @@
 
 		function updateText()
 		{
-			el.innerHTML = el.innerHTML+words[word_counter][character_counter++];
-
-			if(character_counter == words[word_counter].length)
+			el.innerHTML += words[word_counter][character_counter++];
+			console.log();
+			if(character_counter == words[word_counter].length+1)
 			{
 				word_counter++; 	//choose a different word
 				character_counter = 0;	//start over with the first character of the word
@@ -51,5 +52,4 @@
 	</script>
 
 </body>
-
 </html>
